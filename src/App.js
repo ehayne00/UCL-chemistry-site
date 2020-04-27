@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import FunPics from "./components/FunPics"
+import Home from "./components/Home"
+import TeamInfo from "./components/TeamInfo"
+import Science from "./components/Science"
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Switch>
+        <Route exact path="/" render={Home} />
+        <Route
+          exact
+          path="/team-fun"
+          render={(props) => <FunPics {...props} />}
+        />
+        <Route
+          exact
+          path="/meet-the-team"
+          render={(props) => <TeamInfo {...props} />}
+        />
+        <Route
+          exact
+          path="/science-article"
+          render={(props) => <Science {...props} />}
+        />
+      </Switch>
     </div>
   );
 }
