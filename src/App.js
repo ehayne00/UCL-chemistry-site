@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import FunPics from "./components/FunPics"
-import Home from "./components/Home"
-import TeamInfo from "./components/TeamInfo"
-import Science from "./components/Science"
+import FunPics from "./components/FunPics";
+import Home from "./components/Home";
+import TeamInfo from "./components/TeamInfo";
+import Science from "./components/Science";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
-        <Route exact path="/" render={Home} />
+        <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route
           exact
           path="/team-fun"

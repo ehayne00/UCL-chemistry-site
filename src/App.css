@@ -1,10 +1,14 @@
 .App {
   text-align: center;
+  font-family: 'Arapey', serif;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  width: 30px;
+  height: auto;
+  margin-right: 6px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -20,4 +24,61 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navDiv {
+  display: flex;
+  flex-direction: row;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 2px;
+  justify-content: space-between;
+  border: 1px solid black;
+  box-shadow: 0 0 5px black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-image: linear-gradient(to right, rgb(152, 236, 152, 1), rgb(152, 236, 152, 0));
+}
+
+.rowFlex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.rowFlex2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navLink{
+  padding: 28px;
+}
+
+.text-decor {
+  text-decoration: none;
+}
+
+.content-gap {
+  margin-top: 150px;
+}
+
+.text-1 {
+  font-family: 'Paytone One', sans-serif;
+  margin-right: 2px;
+}
+
+.text-2{
+  font-family: 'Marck Script', cursive;
+  margin-top: 26px;
+}
+
+.article-box{
+  margin-left: 11vw;
+  border: 8px solid black;
+  width: 70vw;
+  bottom: 0;
+  padding: 25px;
 }

@@ -3,7 +3,7 @@ import React from "react";
 const Science = () => {
   return (
     <div>
-      <h2>Where some science stuff goes</h2>
+      <h2 className="content-gap">Where some science stuff goes</h2>
     </div>
   );
 };

@@ -2,36 +2,19 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import icon from "../media/molecule.svg"
 
-const iconStyle = {
-    width: '30px',
-    height: 'auto',
-    marginRight: '10px'
-}
-
-const rowFlex = {
-    display: 'flex',
-    flexDirection: 'row',
-    padding: '10px',
-}
-
-const navStyle = {
-    padding: '28px'
-}
-
-
 const NavBar = () => {
   return (
-    <div style={rowFlex}>
-      <NavLink to="/" exact>
-        <div style={rowFlex}>
-          <img className="App-logo" style={iconStyle} src={icon} alt="oh no!"/>
-          <h2>UCL Chemistry</h2>
+    <div className="navDiv">
+      <NavLink className="text-decor" to="/" exact>
+        <div className="rowFlex">
+          <img className="App-logo" src={icon} alt="oh no!"/>
+          <h2 className="text-1">UCL</h2> <h2 className="text-2">Chemistry</h2>
         </div>
       </NavLink>
-      <div style={rowFlex}>
-          <NavLink style={navStyle} to="/team-fun" exact >Gallery</NavLink>
-          <NavLink style={navStyle} to="/meet-the-team" exact >Meet The Team</NavLink>
-          <NavLink style={navStyle} to="/science-article" exact >The Science</NavLink>
+      <div className="rowFlex">
+          <NavLink className="navLink text-decor" to="/team-fun" exact >Gallery</NavLink>
+          <NavLink className="navLink text-decor" to="/meet-the-team" exact >Meet The Team</NavLink>
+          <NavLink className="navLink text-decor" to="/science-article" exact >The Science</NavLink>
       </div>
     </div>
   );
