@@ -12,9 +12,9 @@ const NavBar = () => {
         </div>
       </NavLink>
       <div className="rowFlex">
-          <NavLink className="navLink text-decor" to="/team-fun" exact >Gallery</NavLink>
-          <NavLink className="navLink text-decor" to="/meet-the-team" exact >Meet The Team</NavLink>
-          <NavLink className="navLink text-decor" to="/science-article" exact >The Science</NavLink>
+          <NavLink className="navLink text-decor" to="/team-fun" exact ><strong>Gallery</strong></NavLink>
+          <NavLink className="navLink text-decor" to="/meet-the-team" exact ><strong>Meet The Team</strong></NavLink>
+          <NavLink className="navLink text-decor" to="/science-article" exact ><strong>The Science</strong></NavLink>
       </div>
     </div>
   );

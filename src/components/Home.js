@@ -3,29 +3,37 @@ import articles from "../data/articles.js";
 import ArticleTitle from "./ArticleTitle";
 
 const Home = () => {
-  const [visible, setVisible] = useState(false);
+  const [index, setIndex] = useState(0);
 
-  const handleNewestClick = () => {
-    setVisible(false);
+  const renderThree = articles.slice(index, index + 3);
+
+  const renderOlder = () => {
+    setIndex((index) => index + 3);
   };
 
-  const handleOlderClick = () => {
-    setVisible(true);
+  const renderNewer = () => {
+    setIndex((index) => index - 3);
   };
 
   return (
     <div>
-      <h2 className="content-gap">This is the home page</h2>
+      <h1 className="content-gap">This is the home page</h1>
       <p>blah blah blah about us!</p>
-      <h2>Latest articles:</h2>
+      <h1>Latest articles:</h1>
       <div className="article-box">
-        {articles.reverse().map((
-          article //we cannot have reverse here as it reverses again on each state change
-        ) => (
+        {renderThree.map((article) => (
           <ArticleTitle article={article} key={article.id} />
         ))}
-        {visible && <button onClick={handleNewestClick}>Newest</button>}
-        <button onClick={handleOlderClick}>See Older...</button>
+        {index !== 0 && (
+          <button className="btn" onClick={renderNewer}>
+            See Newer
+          </button>
+        )}
+        {index < articles.length - 3 && (
+          <button className="btn" onClick={renderOlder}>
+            See Older
+          </button>
+        )}
       </div>
     </div>
   );

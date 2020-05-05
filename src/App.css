@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'Arapey', serif;
+  /* font-family: 'Arapey', serif; */
 }
 
 .App-logo {
@@ -54,7 +54,8 @@
 }
 
 .navLink{
-  padding: 28px;
+  padding-right: 80px;
+  padding-top: 30px;
 }
 
 .text-decor {
@@ -82,3 +83,22 @@
   bottom: 0;
   padding: 25px;
 }
+
+.btn{
+  font-size: 18px;
+  padding: 5px;
+  background-color: rgb(62, 221, 173);
+  border-radius: 6px;
+  border: none;
+  color: white;
+}
+
+.btn:hover{
+  /* box-shadow: 0 0 3px black; */
+  background-color: rgb(104, 243, 201);
+  color: white;
+}
+
+/* transition: .5s ease; */
+
+
